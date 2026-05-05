@@ -1,8 +1,14 @@
 {
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/index.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/api"
     }
   ]
 }
