@@ -1,14 +1,8 @@
 {
   "buildCommand": "npm run build",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
+  "outputDirectory": "dist/client",
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
